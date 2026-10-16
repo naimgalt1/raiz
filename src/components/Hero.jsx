@@ -13,7 +13,7 @@ export default function Hero() {
     <section id="hero" className="grid min-h-[calc(100vh-108px)] bg-beige lg:grid-cols-2">
       <div className="flex flex-col justify-center px-7 py-16 lg:px-18 lg:py-20">
         <Reveal>
-          <span className="mb-7 inline-flex w-fit items-center gap-2 rounded-full bg-moss-pale px-4 py-1.5 text-[0.65rem] font-medium tracking-[0.18em] text-moss uppercase">
+          <span className="mb-7 inline-flex w-fit items-center gap-2 rounded-none bg-moss-pale px-4 py-1.5 text-[0.65rem] font-medium tracking-[0.18em] text-moss uppercase">
             <span className="text-[0.5rem]">✦</span> 100% natural &amp; artesanal
           </span>
         </Reveal>
@@ -37,13 +37,13 @@ export default function Hero() {
           <div className="mb-15 flex flex-wrap items-center gap-3.5">
             <a
               href="#catalogo"
-              className="inline-flex items-center gap-2.5 rounded-sm bg-moss px-8 py-4 text-[0.72rem] font-medium tracking-[0.12em] text-beige uppercase transition-all hover:-translate-y-0.5 hover:bg-moss-light"
+              className="inline-flex items-center gap-2.5 rounded-none bg-moss px-8 py-4 text-[0.72rem] font-medium tracking-[0.12em] text-beige uppercase transition-all hover:-translate-y-0.5 hover:bg-moss-light"
             >
               Explorar tienda →
             </a>
             <a
               href="#valores"
-              className="rounded-sm border border-beige-dark px-8 py-3.5 text-[0.72rem] font-medium tracking-[0.12em] text-charcoal uppercase transition-colors hover:border-moss hover:text-moss"
+              className="rounded-none border border-beige-dark px-8 py-3.5 text-[0.72rem] font-medium tracking-[0.12em] text-charcoal uppercase transition-colors hover:border-moss hover:text-moss"
             >
               Nuestra historia
             </a>
@@ -68,7 +68,7 @@ export default function Hero() {
           alt="Cosmética natural Raíz"
           className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
         />
-        <div className="absolute right-10 bottom-10 flex h-28 w-28 items-center justify-center rounded-full bg-beige p-4 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+        <div className="absolute right-10 bottom-10 flex h-28 w-28 items-center justify-center rounded-none bg-beige p-4 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
           <span className="font-display text-[0.65rem] leading-snug text-moss italic">
             Hecho
             <br />a mano

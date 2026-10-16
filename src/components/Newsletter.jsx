@@ -23,7 +23,7 @@ export default function Newsletter() {
   return (
     <section id="newsletter" className="grid items-center gap-12 bg-moss px-6 py-24 lg:grid-cols-2 lg:gap-25 lg:px-18">
       <Reveal className="hidden lg:block">
-        <img src={NEWSLETTER_IMAGE} alt="Raíz naturaleza" className="aspect-4/3 w-full rounded object-cover" />
+        <img src={NEWSLETTER_IMAGE} alt="Raíz naturaleza" className="aspect-4/3 w-full rounded-none object-cover" />
       </Reveal>
 
       <Reveal delay={100} className="text-beige">
@@ -43,14 +43,14 @@ export default function Newsletter() {
         </p>
 
         {submitted ? (
-          <div className="rounded border border-beige/30 bg-white/10 p-9 text-center">
+          <div className="rounded-none border border-beige/30 bg-white/10 p-9 text-center">
             <h3 className="mb-2.5 font-display text-2xl text-beige italic">¡Bienvenida a Raíz! 🌱</h3>
             <p className="text-sm text-beige/70">Tu código de descuento es:</p>
             <button
               type="button"
               onClick={handleCopy}
               title="Haz clic para copiar"
-              className="my-4 mb-2.5 inline-block cursor-pointer rounded-sm bg-beige px-6 py-2.5 text-xl font-bold tracking-[0.2em] text-moss"
+              className="my-4 mb-2.5 inline-block cursor-pointer rounded-none bg-beige px-6 py-2.5 text-xl font-bold tracking-[0.2em] text-moss"
             >
               {copied ? '¡Copiado!' : COUPON_CODE}
             </button>
@@ -63,19 +63,19 @@ export default function Newsletter() {
                 type="text"
                 placeholder="Tu nombre"
                 required
-                className="w-full rounded-sm border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige placeholder:text-beige/40 focus:border-beige focus:outline-none"
+                className="w-full rounded-none border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige placeholder:text-beige/40 focus:border-beige focus:outline-none"
               />
               <input
                 type="email"
                 placeholder="tu@email.com"
                 required
-                className="w-full rounded-sm border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige placeholder:text-beige/40 focus:border-beige focus:outline-none"
+                className="w-full rounded-none border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige placeholder:text-beige/40 focus:border-beige focus:outline-none"
               />
             </div>
             <select
               defaultValue=""
               required
-              className="w-full appearance-none rounded-sm border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige focus:border-beige focus:outline-none"
+              className="w-full appearance-none rounded-none border border-beige/25 bg-white/10 px-4.5 py-3.5 text-sm text-beige focus:border-beige focus:outline-none"
             >
               <option value="" disabled>
                 ¿Qué tipo de piel tienes?
@@ -88,7 +88,7 @@ export default function Newsletter() {
             </select>
             <button
               type="submit"
-              className="cursor-pointer rounded-sm bg-beige py-3.5 text-[0.72rem] font-medium tracking-[0.14em] text-moss uppercase transition-colors hover:bg-cream"
+              className="cursor-pointer rounded-none bg-beige py-3.5 text-[0.72rem] font-medium tracking-[0.14em] text-moss uppercase transition-colors hover:bg-cream"
             >
               Quiero mi 10% de descuento →
             </button>

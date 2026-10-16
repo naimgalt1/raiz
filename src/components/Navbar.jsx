@@ -33,7 +33,7 @@ export default function Navbar({ cartCount }) {
           className="relative flex cursor-pointer items-center justify-center text-[1.1rem] text-charcoal transition-colors hover:text-moss"
         >
           🛒
-          <span className="absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-moss text-[0.55rem] font-bold text-white">
+          <span className="absolute -top-1.5 -right-2 flex h-4 w-4 items-center justify-center rounded-none bg-moss text-[0.55rem] font-bold text-white">
             {cartCount}
           </span>
         </button>

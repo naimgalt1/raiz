@@ -12,7 +12,7 @@ export default function ProductCard({ product, onOpen, onAdd }) {
   return (
     <article
       onClick={() => onOpen(product)}
-      className="group cursor-pointer overflow-hidden rounded border border-beige-dark bg-cream transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(74,103,65,0.1)]"
+      className="group cursor-pointer overflow-hidden rounded-none border border-beige-dark bg-cream transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(74,103,65,0.1)]"
     >
       <div className="relative aspect-square overflow-hidden bg-beige">
         <img
@@ -22,7 +22,7 @@ export default function ProductCard({ product, onOpen, onAdd }) {
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
         />
         <span
-          className={`absolute top-3.5 left-3.5 rounded-full px-3 py-1 text-[0.6rem] font-medium tracking-[0.1em] uppercase ${badgeStyles[product.badge.tone]}`}
+          className={`absolute top-3.5 left-3.5 rounded-none px-3 py-1 text-[0.6rem] font-medium tracking-[0.1em] uppercase ${badgeStyles[product.badge.tone]}`}
         >
           {product.badge.label}
         </span>
@@ -34,7 +34,7 @@ export default function ProductCard({ product, onOpen, onAdd }) {
               event.stopPropagation();
               onAdd(product, 1);
             }}
-            className="w-full cursor-pointer rounded-sm bg-moss py-2.5 text-[0.65rem] font-medium tracking-[0.12em] text-beige uppercase transition-colors hover:bg-moss-light"
+            className="w-full cursor-pointer rounded-none bg-moss py-2.5 text-[0.65rem] font-medium tracking-[0.12em] text-beige uppercase transition-colors hover:bg-moss-light"
           >
             + Añadir al carrito
           </button>

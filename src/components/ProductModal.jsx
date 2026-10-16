@@ -40,12 +40,12 @@ export default function ProductModal({ product, onClose, onAdd }) {
       onClick={(event) => event.target === event.currentTarget && onClose()}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-charcoal/55 p-6 backdrop-blur-sm"
     >
-      <div className="relative grid max-h-[90vh] w-full max-w-4xl grid-cols-1 overflow-y-auto rounded bg-cream md:grid-cols-2">
+      <div className="relative grid max-h-[90vh] w-full max-w-4xl grid-cols-1 overflow-y-auto rounded-none bg-cream md:grid-cols-2">
         <button
           type="button"
           onClick={onClose}
           aria-label="Cerrar"
-          className="absolute top-5 right-5 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-beige text-charcoal transition-colors hover:bg-beige-dark"
+          className="absolute top-5 right-5 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-none bg-beige text-charcoal transition-colors hover:bg-beige-dark"
         >
           ✕
         </button>
@@ -69,7 +69,7 @@ export default function ProductModal({ product, onClose, onAdd }) {
             {product.ingredients.map((ingredient, index) => (
               <span
                 key={ingredient}
-                className={`rounded-full border px-3.5 py-1 text-xs ${
+                className={`rounded-none border px-3.5 py-1 text-xs ${
                   index < 2
                     ? 'border-moss/25 bg-moss-pale text-moss'
                     : 'border-beige-dark bg-beige text-mid'
@@ -95,7 +95,7 @@ export default function ProductModal({ product, onClose, onAdd }) {
             ))}
           </ul>
 
-          <div className="mb-4 flex w-fit items-center rounded-sm border border-beige-dark">
+          <div className="mb-4 flex w-fit items-center rounded-none border border-beige-dark">
             <button
               type="button"
               onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -119,7 +119,7 @@ export default function ProductModal({ product, onClose, onAdd }) {
             type="button"
             onClick={handleAdd}
             disabled={added}
-            className={`flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-sm py-3.5 text-[0.72rem] font-medium tracking-[0.12em] uppercase transition-colors ${
+            className={`flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-none py-3.5 text-[0.72rem] font-medium tracking-[0.12em] uppercase transition-colors ${
               added ? 'bg-earth text-beige' : 'bg-moss text-beige hover:bg-moss-light'
             }`}
           >

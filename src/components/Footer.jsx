@@ -68,7 +68,7 @@ export default function Footer() {
         </p>
         <div className="flex gap-3">
           {certifications.map((cert) => (
-            <span key={cert} className="rounded-full border border-white/10 px-3 py-1 text-[0.6rem] tracking-[0.08em] text-light/40 uppercase">
+            <span key={cert} className="rounded-none border border-white/10 px-3 py-1 text-[0.6rem] tracking-[0.08em] text-light/40 uppercase">
               {cert}
             </span>
           ))}

@@ -32,7 +32,7 @@ export default function Catalog({ onOpen, onAdd }) {
                 type="button"
                 aria-pressed={isActive}
                 onClick={() => setActiveCategory(category.id)}
-                className={`cursor-pointer rounded-full border px-5 py-2 text-[0.65rem] font-medium tracking-[0.12em] uppercase transition-colors ${
+                className={`cursor-pointer rounded-none border px-5 py-2 text-[0.65rem] font-medium tracking-[0.12em] uppercase transition-colors ${
                   isActive
                     ? 'border-moss bg-moss text-beige'
                     : 'border-beige-dark bg-transparent text-mid hover:border-moss hover:text-moss'
