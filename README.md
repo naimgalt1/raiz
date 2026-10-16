@@ -37,17 +37,18 @@ npm run storybook        # catálogo de componentes en http://localhost:6006
 npm run build-storybook  # Storybook estático
 ```
 
-## Qué aprendí
 
-- **Tokens de diseño con Tailwind v4.** Definir la paleta en `@theme` me obligó a pensar en nombres semánticos (`moss`, `terra`) en lugar de valores sueltos, y el resultado es mucho más fácil de mantener.
-- **Estado compartido sin librerías.** El carrito y el producto seleccionado viven en `App.jsx` y se pasan por props. Para una tienda de este tamaño no hacía falta Redux ni Context.
-- **Reiniciar estado con `key`.** El modal de producto se monta con `key={product.id}`, así la cantidad y el estado "añadido" se reinician solos en cada apertura, sin `useEffect` extra.
-- **Storybook como documentación viva.** Crear historias para la tarjeta y el modal me hizo separar las props que realmente necesitan los componentes.
+## Lecciones técnicas
 
-## Retos
+- **Tokens de diseño en Tailwind v4.** Definir la paleta en `@theme` da nombres semánticos (`moss`, `terra`) a los colores y evita valores sueltos repetidos en cada componente.
+- **Estado sin librerías externas.** El carrito y el producto seleccionado viven en `App.jsx` y se pasan por props. Para una tienda de este tamaño no hace falta Redux ni Context.
+- **Reiniciar estado con `key`.** El modal de producto se monta con `key={product.id}`, así la cantidad y el estado "añadido" se reinician en cada apertura sin `useEffect` adicional.
+- **Storybook como documentación de componentes.** Las historias documentan variantes reales (tarjeta "Más vendido", "Nuevo", "Eco pack") y obligan a que las props de cada componente sean explícitas.
 
-- **Instalación bloqueada por permisos.** La caché de npm (`~/.npm`) pertenecía a root y `npm install` fallaba. Lo resolví usando una caché en otra carpeta mientras dejaba documentado el comando para corregir los permisos.
-- **Configuración de Storybook 10.** Tuve que ajustar `main.js` y `preview.js` para que cargaran los estilos de Tailwind y el addon de documentación.
-- **Clases de Tailwind v4.** Algunos valores, como `z-100`, no existen como clase estándar; los pasé a valores arbitrarios (`z-[100]`).
-- **Menú móvil sin menú.** En la versión original los enlaces desaparecían en móvil. Los hice visibles como una fila desplazable bajo el logo, con la barra de scroll oculta.
-- **Imágenes externas.** Las imágenes apuntaban a un servicio ajeno. Las descargué al proyecto y actualicé las rutas, y también reescribí el historial de git para que no quedara ninguna referencia.
+## Problemas resueltos
+
+- **Permisos de la caché de npm.** `~/.npm` pertenecía a root y `npm install` fallaba. Solución: usar `NPM_CONFIG_CACHE` apuntando a otra carpeta, y `sudo chown` para dejar la caché corregida.
+- **Configuración de Storybook 10.** `main.js` y `preview.js` deben cargar los estilos de Tailwind y declarar el addon de documentación para que las historias se vean con el tema.
+- **Clases de Tailwind v4.** Valores como `z-100` no son clases estándar; se usan valores arbitrarios (`z-[100]`).
+- **Navegación oculta en móvil.** Los enlaces solo aparecían en escritorio. Se muestran como fila desplazable bajo el logo, con la barra de scroll oculta.
+- **Dependencia de imágenes externas.** Las imágenes se descargaron al proyecto (`public/images`) y se reescribieron las rutas. Después se reescribió el historial de git para eliminar cualquier referencia al origen.
