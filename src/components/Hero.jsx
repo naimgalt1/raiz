@@ -3,9 +3,9 @@ import Reveal from './Reveal.jsx';
 const HERO_IMAGE = '/images/9c829bbe7_generated_image.png';
 
 const trust = [
-  { value: '100%', label: 'Orgánico' },
-  { value: '+2k', label: 'Clientas felices' },
-  { value: '0', label: 'Tóxicos' },
+  { value: 'Orgánico', label: 'Ingredientes certificados' },
+  { value: 'Artesanal', label: 'Lotes pequeños' },
+  { value: 'Cruelty free', label: 'Sin pruebas en animales' },
 ];
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
           alt="Cosmética natural Raíz"
           className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
         />
-        <div className="badge-spin absolute right-10 bottom-10 flex h-28 w-28 items-center justify-center rounded-full bg-beige p-4 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+        <div className="absolute right-10 bottom-10 flex h-28 w-28 items-center justify-center rounded-full bg-beige p-4 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
           <span className="font-display text-[0.65rem] leading-snug text-moss italic">
             Hecho
             <br />a mano

@@ -1,6 +1,7 @@
 import Reveal from './Reveal.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import { values } from '../data/content.js';
+import Icon from './Icon.jsx';
 
 export default function Values() {
   return (
@@ -26,7 +27,7 @@ export default function Values() {
         {values.map((value, index) => (
           <Reveal key={value.title} delay={index * 100} className="h-full">
             <article className="h-full bg-cream p-9 text-center transition-colors duration-300 hover:bg-moss-pale">
-              <span className="mb-5 block text-4xl">{value.icon}</span>
+              <span className="mb-5 block text-moss"><Icon name={value.icon} size={32} /></span>
               <h3 className="mb-3 font-display text-[1.15rem] font-medium text-charcoal">{value.title}</h3>
               <p className="text-[0.85rem] leading-[1.8] text-mid">{value.text}</p>
             </article>

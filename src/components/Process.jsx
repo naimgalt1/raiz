@@ -1,6 +1,7 @@
 import Reveal from './Reveal.jsx';
 import SectionHeader from './SectionHeader.jsx';
 import { steps } from '../data/content.js';
+import Icon from './Icon.jsx';
 
 export default function Process() {
   return (
@@ -26,7 +27,7 @@ export default function Process() {
         {steps.map((step, index) => (
           <Reveal key={step.title} delay={index * 100} className="h-full">
             <article className="relative h-full bg-beige p-9 transition-colors duration-300 hover:bg-cream">
-              <span className="mb-4 block text-2xl">{step.icon}</span>
+              <span className="mb-4 block text-moss"><Icon name={step.icon} size={28} /></span>
               <p className="mb-4 font-display text-5xl leading-none text-earth/15">
                 {String(index + 1).padStart(2, '0')}
               </p>
