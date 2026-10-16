@@ -7,13 +7,13 @@ const links = [
 
 export default function Navbar({ cartCount }) {
   return (
-    <nav className="sticky top-0 z-[100] flex h-18 items-center justify-between border-b border-beige-dark bg-cream/95 px-5 backdrop-blur-md lg:px-18">
+    <nav className="sticky top-0 z-[100] flex flex-wrap items-center justify-between gap-y-3 border-b border-beige-dark bg-cream/95 px-5 py-3 backdrop-blur-md lg:h-18 lg:flex-nowrap lg:px-18 lg:py-0">
       <a href="#hero" className="flex items-center gap-2.5">
         <img src="/images/2367710e9_generated_image.png" alt="" className="h-9 w-9 object-contain" />
         <span className="font-display text-[1.55rem] font-medium tracking-[0.04em] text-charcoal">Raíz</span>
       </a>
 
-      <ul className="hidden gap-9 lg:flex">
+      <ul className="order-last flex w-full justify-between gap-4 overflow-x-auto text-[0.66rem] [scrollbar-width:none] lg:order-none lg:w-auto lg:gap-9 lg:text-[0.75rem]">
         {links.map((link) => (
           <li key={link.href}>
             <a
