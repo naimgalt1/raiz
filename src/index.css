@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Paleta y tipografía de Raíz. Cada token genera utilidades (bg-moss, text-earth…) */
+@theme {
+  --color-beige: #f5ecd7;
+  --color-beige-dark: #ead9bb;
+  --color-beige-light: #faf6ee;
+  --color-cream: #fdfaf4;
+  --color-moss: #4a6741;
+  --color-moss-light: #6b8f60;
+  --color-moss-pale: #e8efe6;
+  --color-earth: #8b5e3c;
+  --color-earth-light: #c4956a;
+  --color-earth-pale: #f5eae0;
+  --color-terra: #c17b5a;
+  --color-charcoal: #2d2a26;
+  --color-mid: #7a7060;
+  --color-light: #b5a898;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Jost", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body font-light antialiased;
+  }
+}
+
+/* Anillo giratorio del sello "Hecho a mano" del hero */
+@keyframes badge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.badge-spin {
+  animation: badge-spin 12s linear infinite;
+}
